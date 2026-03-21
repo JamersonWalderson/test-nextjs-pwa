@@ -34,7 +34,7 @@ export default function Home() {
             center.
           </p>
         </div>
-        <strong>Teste PWA v.1.0.2</strong>
+        <strong>Teste PWA v.1.0.3</strong>
       </main>
     </div>
   );
