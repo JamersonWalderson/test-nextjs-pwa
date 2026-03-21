@@ -15,7 +15,6 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Teste PWA",
   description: "Aplicação Progressive Web App de teste",
-  manifest: "/manifest.json",
   themeColor: "#000000",
   appleWebApp: {
     capable: true,
