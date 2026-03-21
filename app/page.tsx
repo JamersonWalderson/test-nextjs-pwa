@@ -1,4 +1,5 @@
 import Image from "next/image";
+import InstallButton from "./components/InstallButton";
 
 export default function Home() {
   return (
@@ -33,6 +34,7 @@ export default function Home() {
             </a>{" "}
             center.
           </p>
+          <InstallButton />
         </div>
         <strong>Teste PWA v.1.0.3</strong>
       </main>
