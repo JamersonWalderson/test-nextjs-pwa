@@ -9,8 +9,6 @@ export default function OneSignalProvider() {
   useEffect(() => {
     OneSignal.init({
       appId: "d38fa73a-a9f8-400d-91cb-9a2bec714447",
-      serviceWorkerPath: '/sw.js',
-      serviceWorkerParam: { scope: '/' },
       allowLocalhostAsSecureOrigin: true,
     }).then(() => {
       console.log('OneSignal initialized successfully')
