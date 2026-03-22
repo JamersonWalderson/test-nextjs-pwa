@@ -57,10 +57,25 @@ export default function RootLayout({
             __html: `
               window.OneSignalDeferred = window.OneSignalDeferred || [];
               OneSignalDeferred.push(async function(OneSignal) {
-                await OneSignal.init({
-                  appId: "d38fa73a-a9f8-400d-91cb-9a2bec714447",
-                });
+                try {
+                  await OneSignal.init({
+                    appId: "d38fa73a-a9f8-400d-91cb-9a2bec714447",
+                  });
+                  console.log('OneSignal initialized successfully');
+                } catch (error) {
+                  console.warn('OneSignal blocked or failed to load:', error);
+                  // Opcional: mostrar mensagem para usuário
+                  window.onesignalBlocked = true;
+                }
               });
+              
+              // Verificar se script foi carregado
+              setTimeout(() => {
+                if (!window.OneSignalDeferred) {
+                  console.warn('OneSignal script blocked by ad blocker');
+                  window.onesignalBlocked = true;
+                }
+              }, 3000);
             `,
           }}
         />
