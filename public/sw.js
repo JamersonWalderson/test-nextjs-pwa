@@ -1,3 +1,5 @@
+importScripts('https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js');
+
 self.addEventListener('install', (event) => {
   console.log('Service Worker installing.')
   self.skipWaiting()
