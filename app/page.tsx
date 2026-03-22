@@ -38,7 +38,7 @@ export default function Home() {
             <InstallButton />
           </div>
         </div>
-        <strong>Teste PWA v.1.0.10</strong>
+        <strong>Teste PWA v.1.0.11</strong>
       </main>
     </div>
   );
